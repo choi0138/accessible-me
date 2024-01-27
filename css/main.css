@@ -1,8 +1,12 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f4f4f4;
+  color: #333;
   margin: 0;
   padding: 0;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 h1,
@@ -12,12 +16,6 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 img {
@@ -45,7 +43,8 @@ img {
 }
 
 form input,
-form textarea {
+form textarea,
+form button {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
@@ -68,4 +67,32 @@ form button {
 
 .site-footer {
   padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+  }
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -9999;
+}
+
+.skip-link:focus {
+  position: absolute;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  z-index: 9999;
 }
