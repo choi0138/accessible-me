@@ -69,6 +69,10 @@ form button {
   padding: 2rem 0;
 }
 
+input:focus, textarea:focus, button:focus {
+  outline: 2px solid #005fcc;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .main-nav ul {
